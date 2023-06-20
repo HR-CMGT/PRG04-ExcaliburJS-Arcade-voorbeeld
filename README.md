@@ -2,7 +2,7 @@
 
 In dit project zie je hoe je de arcade stick kan toevoegen aan een excalibur project.
 
-> NOOT: dit is getetst in Chrome. Er zit een bug in Firefox.
+> NOOT: dit is getetst in Chrome. Er zit een bug bij de button detection in Firefox.
 
 ## 🕹 🎮 Joystick and Gamepad
 
