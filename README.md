@@ -10,9 +10,10 @@ The arcade class will detect if you use a gamepad 🎮 or the arcade cabinet joy
 
 ### Add library to package.json
 Run next line in your project terminal:
- ```cli
+
+```cli
 npm install git@github.com:HR-CMGT/arcade-game.git
- ```
+```
 
  ### Usage in game class
  ```javascript
@@ -45,14 +46,22 @@ export class Game {
         this.update();
     }
 
-    //TODO: incoporate in library game loop, instead of an update with requestAnimationFrame
+    // excalibur update function
+    onPreUpdate() {
+        for (let joystick of this.#arcade.Joysticks) {
+            joystick.update()
+        }
+    }
+
+    // voorbeeld zonder excalibur
+    /*
     update() {
         for (let joystick of this.#arcade.Joysticks) {
             joystick.update()
         }
-
         requestAnimationFrame(() => this.update());
     }
+    */
 
     disconnect() {
         document.removeEventListener("joystickcreated", this.#joystickListener)
